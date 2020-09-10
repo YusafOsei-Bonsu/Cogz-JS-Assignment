@@ -8,6 +8,11 @@ This assignment requires the creation and testing of different JS functions. Bel
 4. Write a JavaScript program to sort an array of JavaScript objects. 
 5. Write a JavaScript function to retrieve all the names of object's own and inherited properties. 
 
+## Tech Stack
+
+- JavaScript
+- Jasmine
+
 ## Project Setup
 
 1. In terminal, I entered `npm i --save-dev jasmine` to locally install the Jasmine package.
