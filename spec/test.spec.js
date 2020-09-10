@@ -11,6 +11,9 @@ describe('JS Assignments', () => {
         // Check if the file exists
         it('File should exist', () => expect(fileSystem.statSync('./scripts/count.js')).toBeTruthy());
         
+        // Sample test data
+        it("Should return 2 since there's two Ts in 'test'", () => expect(countLetters("test", 't')).toBe(2))
+
         // Check how many times 'a' occurs in the word "radar"
         it("Should return 2 when counting a's in 'radar'", () => expect(countLetters("radar", "a")).toBe(2));
 
@@ -44,6 +47,9 @@ describe('JS Assignments', () => {
         // Check if the file exists
         it('File should exist', () => expect(fileSystem.statSync('./scripts/reverse.js')).toBeTruthy());
         
+        // Sample test data
+        it('Should return 34223', () => expect(reverse(32243)).toBe(34223))
+
         // Different lengths of numbers 
         it('Should return 1', () => expect(reverse(1)).toBe(1));    
         it('Should return 005', () => expect(reverse(500)).toBe(005));
@@ -60,8 +66,15 @@ describe('JS Assignments', () => {
          it('File should exist', () => expect(fileSystem.statSync('./scripts/objectLength.js')).toBeTruthy());
 
          it("Should return 1 since there's one property", () => expect(objectLength({ name: "Yusaf Osei-Bonsu" })).toBe(1));
+         
+         // Sample test data
+         it("Should return 3 since there's three property", () => expect(objectLength({
+            name : "test",
+            class : "VI",
+            rollno : 12 
+         })).toBe(3));
 
-         it("Should return 4 since there's 4 properties", () => expect(objectLength({ 
+         it("Should return 4 since there's four properties", () => expect(objectLength({ 
              name: 'Fiat',
              model: 500,
              weight: '850kg',
