@@ -20,6 +20,18 @@ describe('JS Assignments', () => {
         // Checks if an error message returns if one of the arguments is a number
         it("Should return an error message if one of the arguments is a number", () => expect(countLetters(1, '2')).toBe("Enter strings only."));
 
+        // Checks if an error message returns if both of the arguments are boolean values
+        it("Should return an error message if both arguments are boolean", () => expect(countLetters(true, false)).toBe("Enter strings only."));
+
+        // Checks if an error message returns if one of the arguments is a boolean
+        it("Should return an error message if one of the arguments is a boolean", () => expect(countLetters(true, 'false')).toBe("Enter strings only."));
+
+        // Checks if an error message returns if both of the arguments are decimal/float
+        it("Should return an error message if both arguments are decimal/float", () => expect(countLetters(1.1, 1.2)).toBe("Enter strings only."));
+
+        // Checks if an error message returns if one of the arguments is a decimal/float
+        it("Should return an error message if one of the arguments is a decimal/float", () => expect(countLetters(1.1, '1.2')).toBe("Enter strings only."));
+
         // Checks if an error message returns if both arguments are non-alphabetical strings
         it("Should return an error message if both of the arguments are non-alphabetical Strings", () => expect(countLetters('1', '2')).toBe("Enter alphabets only."));
     });
