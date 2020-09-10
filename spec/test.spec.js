@@ -84,7 +84,39 @@ describe('JS Assignments', () => {
 
     // Test suite for JS fn that sorts list of objects 
     describe('Object-sort JS Fn', () => {
+        // Sample test data
+        let testData = [
+            { title: "The Road Ahead", author: "Bill Gates", libraryID: 1245 },
+            { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
+            { title: "Mockingjay: The Final Book of The Hunger", author: "Suzanne Collins", libraryID: 3245 }
+        ];
+
         // Check if the file exists
         it('File should exist', () => expect(fileSystem.statSync('./scripts/objectSort.js')).toBeTruthy());
+
+        // Checking if the function sorts a list of objects by their properties
+        it("Should return a version of the list that's sorted by 'title'", () => {
+            expect(objectSort(testData, "title")).toEqual([
+                Object({ title: 'Mockingjay: The Final Book of The Hunger', author: 'Suzanne Collins', libraryID: 3245 }),
+                Object({ title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1245 }), 
+                Object({ title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 })
+            ]);
+        });
+        
+        it("Should return a version of the list that's sorted by 'author'", () => {
+            expect(objectSort(testData, "author")).toEqual([
+                Object({ title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1245 }), 
+                Object({ title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 }), 
+                Object({ title: 'Mockingjay: The Final Book of The Hunger', author: 'Suzanne Collins', libraryID: 3245 })
+            ]);
+        });
+
+        it("Should return a version of the list that's sorted by 'libraryID'", () => {
+            expect(objectSort(testData, "libraryID")).toEqual([
+                Object({ title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1245 }), 
+                Object({ title: 'Mockingjay: The Final Book of The Hunger', author: 'Suzanne Collins', libraryID: 3245 }),
+                Object({ title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 })
+            ]);
+        }); 
     });
 })
