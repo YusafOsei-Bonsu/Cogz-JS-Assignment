@@ -16,7 +16,4 @@ module.exports = countLetters = (word, letter) => {
     } else {
         return "Enter alphabets only.";
     }
-
 }
-
-console.log(typeof('2'));
