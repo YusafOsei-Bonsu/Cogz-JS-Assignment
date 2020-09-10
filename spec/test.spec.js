@@ -2,7 +2,7 @@ const fileSystem = require('fs');
 const countLetters = require('../scripts/count.js');
 const reverse = require('../scripts/reverse.js');
 const objectLength = require('../scripts/objectLength.js');
-
+const objectSort = require('../scripts/objectSort.js');
 
 describe('JS Assignments', () => {
     
@@ -80,5 +80,11 @@ describe('JS Assignments', () => {
              weight: '850kg',
              color: 'white'
           })).toBe(4));
+    });
+
+    // Test suite for JS fn that sorts list of objects 
+    describe('Object-sort JS Fn', () => {
+        // Check if the file exists
+        it('File should exist', () => expect(fileSystem.statSync('./scripts/objectSort.js')).toBeTruthy());
     });
 })
