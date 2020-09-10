@@ -5,8 +5,8 @@ This assignment requires the creation and testing of different JS functions. Bel
 1. Write a JavaScript function to  get the number of occurrences of each letter in specified string. &#9745;
 2. Write a JavaScript function that reverse a number. &#9745;
 3. Write a JavaScript program to get the length of a JavaScript object. &#9745;
-4. Write a JavaScript program to sort an array of JavaScript objects. 
-5. Write a JavaScript function to retrieve all the names of object's own and inherited properties. 
+4. Write a JavaScript program to sort an array of JavaScript objects. &#9745;
+5. Write a JavaScript function to retrieve all the names of object's own and inherited properties. &#9745;
 
 ## Tech Stack
 
