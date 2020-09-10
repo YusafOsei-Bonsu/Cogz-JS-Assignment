@@ -1,6 +1,8 @@
 const fileSystem = require('fs');
 const countLetters = require('../scripts/count.js');
 const reverse = require('../scripts/reverse.js');
+const objectLength = require('../scripts/objectLength.js');
+
 
 describe('JS Assignments', () => {
     
@@ -50,5 +52,20 @@ describe('JS Assignments', () => {
         // Checks if the fn returns an error message in response to recieving non-integer input 
         it('Should return an error message in response to alphabetical arguments', () => expect(reverse("hello world")).toBe("Enter whole numbers only."));
         it('Should return an error message in response to a decimal argument', () => expect(reverse(1.5)).toBe("Enter whole numbers only."));
+    });
+
+    // Test suite for object-length JS fn
+    describe('Object-length JS Fn', () => {
+         // Check if the file exists
+         it('File should exist', () => expect(fileSystem.statSync('./scripts/objectLength.js')).toBeTruthy());
+
+         it("Should return 1 since there's one property", () => expect(objectLength({ name: "Yusaf Osei-Bonsu" })).toBe(1));
+
+         it("Should return 4 since there's 4 properties", () => expect(objectLength({ 
+             name: 'Fiat',
+             model: 500,
+             weight: '850kg',
+             color: 'white'
+          })).toBe(4));
     });
 })
