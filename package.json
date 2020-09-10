@@ -1,0 +1,15 @@
+{
+  "name": "js-assignment",
+  "version": "1.0.0",
+  "description": "This assignment requires the creation and unit testing of different JS functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Yusaf Osei-Bonsu",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.6.1",
+    "jasmine-spec-reporter": "^5.0.2"
+  }
+}
