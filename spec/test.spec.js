@@ -4,7 +4,7 @@ const countLetters = require('../count.js');
 describe('JS Assignments', () => {
     
     // Test suite for the letter-counting JS fn 
-    describe('Count letters JS function', () => {
+    describe('Letter-counting JS Function', () => {
         // Check if the file exists
         it('File should exist', () => expect(fileSystem.statSync('count.js')).toBeTruthy());
         
@@ -14,8 +14,13 @@ describe('JS Assignments', () => {
         // Check how many times 'C' occurs in the word "Codecademy"
         it("Should return 1 when counting the capital 'C' in 'Codecademy'", () => expect(countLetters("Codecademy", "C")).toBe(2));
 
-        // Returns an error message if non-alphabetical arguments are entered
-        it("Should return an error message if any of the arguments are not ", () => expect(countLetters(1, 2)).toBe("Enter alphabets only."));
+        // Checks if an error message returns if both of the arguments are numbers
+        it("Should return an error message if both arguments are numbers", () => expect(countLetters(1, 2)).toBe("Enter strings only."));
 
+        // Checks if an error message returns if one of the arguments is a number
+        it("Should return an error message if one of the arguments is a number", () => expect(countLetters(1, '2')).toBe("Enter strings only."));
+
+        // Checks if an error message returns if both arguments are non-alphabetical strings
+        it("Should return an error message if both of the arguments are non-alphabetical Strings", () => expect(countLetters('1', '2')).toBe("Enter alphabets only."));
     });
 })
