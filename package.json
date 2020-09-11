@@ -14,13 +14,5 @@
   },
   "dependencies": {
     "fs": "0.0.1-security"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YusafOsei-Bonsu/Cogz-JS-Assignment.git"
-  },
-  "bugs": {
-    "url": "https://github.com/YusafOsei-Bonsu/Cogz-JS-Assignment/issues"
-  },
-  "homepage": "https://github.com/YusafOsei-Bonsu/Cogz-JS-Assignment#readme"
+  }
 }
